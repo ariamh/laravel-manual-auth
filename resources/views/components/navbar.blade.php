@@ -20,7 +20,12 @@
             <a href="/profile" class="px-4 py-5 inline-block">{{ Auth::user()->name }}</a>
         </li>
         <li>
-            <a href="/logout" class="px-4 py-5 inline-block">Logout</a>
+            <form method="post" action="{{ route('logout') }}" class="px-4 py-5 inline-block">
+                @csrf
+                <button class="focus:outline-none">
+                    Logout
+                </button>
+            </form>
         </li>
         @endguest
     </ul>

@@ -1,4 +1,4 @@
- <?php
+<?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -9,7 +9,7 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', HomeController::class)->name('home');
 Route::get('/dashboard', DashboardController::class)->middleware('auth')->name('dashboard');
-Route::post('/logout', LogoutController::class)->name('logout');
+Route::post('/logout', LogoutController::class)->middleware('auth')->name('logout');
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisterController::class, 'create'])->name('register');
