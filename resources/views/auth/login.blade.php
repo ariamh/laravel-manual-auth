@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full lg:w-5/12">
+<div class="w-full lg:w-4/12 mx-auto py-40">
     <div class="bg-white shadow p-8 rounded-lg">
         <h1 class="font-medium text-xl mb-5">{{ $title }}</h1>
 
